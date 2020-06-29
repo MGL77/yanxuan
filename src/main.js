@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// rem开始
+import "./assets/rem.js"
+// rem结束
+
 Vue.config.productionTip = false
 
 // 全局状态管理工具开始
 import VueAxios from "vue-axios"
 import axios from "axios"
-Vue.use(VueAxios,axios)
+Vue.use(VueAxios, axios)
 // 全局状态管理工具结束
 
 // vant开始

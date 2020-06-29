@@ -13,6 +13,7 @@ export default {
 *{
   margin: 0;
   padding:0;
+  font-size: 0.12rem;
 }
 ul li{
   list-style:none;
