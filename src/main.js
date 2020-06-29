@@ -10,11 +10,11 @@ import "./assets/rem.js"
 
 Vue.config.productionTip = false
 
-// 全局状态管理工具开始
+// axios开始
 import VueAxios from "vue-axios"
 import axios from "axios"
 Vue.use(VueAxios, axios)
-// 全局状态管理工具结束
+// axios结束
 
 // vant开始
 import Vant from 'vant';
