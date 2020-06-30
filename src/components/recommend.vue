@@ -5,7 +5,13 @@
       <van-icon name="arrow" />
     </div>
 
-    <ul>
+    <!-- loading开始 -->
+    <div class="loading" v-if="loading">
+      <van-loading type="spinner" color="#1989fa" />
+    </div>
+    <!-- loading结束 -->
+
+    <ul v-else>
       <recommendChild v-for="(item,index) in recommend" :key="index" :child="item"></recommendChild>
     </ul>
   </div>
@@ -18,19 +24,33 @@ export default {
   },
   data() {
     return {
-      recommend: []
+      recommend: [],
+      loading: true
     };
   },
   async created() {
     const { data } = await this.axios.get(
-      "https://api.it120.cc/small4/shop/goods/kanjia/list"
+      "https://api.it120.cc/small4/shop/goods/list"
     );
-    this.recommend = data.data.goodsMap;
+    this.recommend = data.data;
     console.log(this.recommend);
+    this.loading = false;
   }
 };
 </script>
 <style lang="less">
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
 .boss {
   width: 100%;
   border-bottom: 0.14rem solid #f5f5f5;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b>3</b>
+        <b>分类</b>
     </div>
 </template>
 <script>
@@ -8,6 +8,6 @@ export default {
     
 }
 </script>
-<style scoped>
+<style lang="less">
     
 </style>

@@ -5,20 +5,16 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style>
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   font-size: 0.12rem;
 }
-ul li{
-  list-style:none;
+ul li {
+  list-style: none;
 }
-/* img{
-  display: block;
-} */
 </style>
