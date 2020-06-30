@@ -5,34 +5,16 @@
       <van-icon name="arrow" />
     </div>
     <ul>
-      <li v-for="(item,index) in Bargaining" :key="index">
-        <div class="list">
-          <img :src="item.pic" alt />
-          <div class="list_child">
-            <p>{{ item.name }}</p>
-            <p>{{ item.characteristic }}</p>
-            <ol>
-              <li>
-                <p style="color:#D00000;font-weight:bold">￥{{ item.minPrice }}</p>
-                <p style="color:black;font-weight:bold">低价</p>
-              </li>
-              <li>
-                <p>￥{{ item.originalPrice }}</p>
-                <p>原价</p>
-              </li>
-              <li>
-                <p>{{ item.stores }}</p>
-                <p>限量</p>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </li>
+      <BargainingChild v-for="(item,index) in Bargaining" :key="index" :child="item"></BargainingChild>
     </ul>
   </div>
 </template>
 <script>
+import BargainingChild from "@/components/BargainingChild.vue"
 export default {
+  components:{
+    BargainingChild
+  },
   data() {
     return {
       Bargaining: []

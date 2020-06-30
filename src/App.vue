@@ -18,4 +18,7 @@ export default {
 ul li{
   list-style:none;
 }
+/* img{
+  display: block;
+} */
 </style>
